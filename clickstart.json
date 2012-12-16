@@ -1,15 +1,15 @@
 {
-    "id": "stockfishchess-ios-app",
-    "name": "Stockfish iOS Build",
+    "id": "stockfishchess-ios-ipa",
+    "name": "Stockfish iOS Archive Build",
     "source": "github",
-    "description" : "Stockfish Chess Program for iOS - App Build",
-    "doc-url" : "https://github.com/mqprichard/stockfishchess-ios-app/blob/master/readme.md",
+    "description" : "Stockfish Chess Program for iOS - IPA Build",
+    "doc-url" : "https://github.com/mqprichard/stockfishchess-ios-ipa/blob/master/readme.md",
     "icon" : "https://d3ko533tu1ozfq.cloudfront.net/clickstart/sencha_icon.png",
 
     "build-with-jenkins": {
         "plugins" : ["git","xcode-plugin"],
         "template": {
-            "type": "https://raw.github.com/mqprichard/stockfishchess-ios-app/master/jenkins-config.xml",
+            "type": "https://raw.github.com/mqprichard/stockfishchess-ios-ipa/master/jenkins-config.xml",
             "options": {
             }
         }
