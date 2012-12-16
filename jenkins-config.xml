@@ -2,8 +2,10 @@
 <project>
 	<actions/>
 	<description>
-Stockfish iOS Xcode build: Requires a MacOS slave with Xcode installed. The output is $WORKSPACE/Applications/Stockfish.app,
- which can be run in the local environment using the Xcode iOS Simulator lauched via the $WORKSPACE/ios-sim utility.
+Stockfish iOS Xcode build: Requires a MacOS slave with Xcode installed. This build produces an .ipa archive, which 
+can be installed to a locally-tethered device, or distributed for beta testing via the TestFlight/Appaloosa Jenkins 
+plugins (requires an ad hoc Provisioning Profile to be configured on the slave). The .ipa archive is generated in: 
+$WORKSPACE/build/${Configuration}-${SDK) 
 	</description>
 		<logRotator>
 		<daysToKeep>60</daysToKeep>
@@ -64,7 +66,7 @@ Stockfish iOS Xcode build: Requires a MacOS slave with Xcode installed. The outp
 			<cleanTestReports>false</cleanTestReports>
 			<configuration>Debug</configuration>
 			<target>Stockfish</target>
-			<sdk>iphonesimulator</sdk>
+			<sdk>iphoneos</sdk>
 			<symRoot/>
 			<configurationBuildDir/>
 			<xcodeProjectPath/>
@@ -75,7 +77,7 @@ Stockfish iOS Xcode build: Requires a MacOS slave with Xcode installed. The outp
 			<embeddedProfileFile/>
 			<cfBundleVersionValue>2.2.${BUILD_NUMBER}</cfBundleVersionValue>
 			<cfBundleShortVersionStringValue>2.2.${BUILD_NUMBER}</cfBundleShortVersionStringValue>
-			<buildIpa>false</buildIpa>
+			<buildIpa>true</buildIpa>
 			<unlockKeychain>false</unlockKeychain>
 			<keychainPath>${HOME}/Library/Keychains/login.keychain</keychainPath>
 			<keychainPwd/>
