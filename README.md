@@ -5,7 +5,7 @@ Stockfish iOS app: Automated CI for iOS (Universal iPhone/iPad build) using Clou
 
 <i>java -jar jenkins-cli.jar -s https://&lt;your-domain-name&gt;.ci.cloudbees.com -i &lt;your-private-ssh-keyfile&gt; customer-managed-slave -fsroot &lt;Jenkins-workspace-location&gt; -labels android -labels xcode -executors 4 -name mobile-slave</i>
 
-<a href="https://grandcentral.cloudbees.com/?CB_clickstart=https://raw.github.com/mqprichard/stockfishchess-ios-app/master/clickstart.json"><img src="https://d3ko533tu1ozfq.cloudfront.net/clickstart/deployInstantly.png"/></a>
+<a href="https://grandcentral.cloudbees.com/?CB_clickstart=https://raw.github.com/mqprichard/stockfishchess-ios-ipa/master/clickstart.json"><img src="https://d3ko533tu1ozfq.cloudfront.net/clickstart/deployInstantly.png"/></a>
 
 You will need to have Xcode installed on the MacOS slave: this build will produce an .ipa archive, which can be installed to a locally-tethered device, or distributed for beta testing via the TestFlight/Appaloosa Jenkins plugins (requires an ad hoc Provisioning Profile to be configured on the slave). The archive is generated in: <i>$WORKSPACE/build/${Configuration}-${SDK)</i>. 
 
